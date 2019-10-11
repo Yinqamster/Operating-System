@@ -1,0 +1,25 @@
+
+umain:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <uentry>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	eb fe                	jmp    3 <uentry+0x3>
+   5:	66 90                	xchg   %ax,%ax
+   7:	90                   	nop
+
+00000008 <printf>:
+   8:	55                   	push   %ebp
+   9:	89 e5                	mov    %esp,%ebp
+   b:	53                   	push   %ebx
+   c:	31 db                	xor    %ebx,%ebx
+   e:	b9 61 00 00 00       	mov    $0x61,%ecx
+  13:	b8 04 00 00 00       	mov    $0x4,%eax
+  18:	89 da                	mov    %ebx,%edx
+  1a:	cd 80                	int    $0x80
+  1c:	5b                   	pop    %ebx
+  1d:	5d                   	pop    %ebp
+  1e:	c3                   	ret    
